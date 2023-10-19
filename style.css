@@ -9,7 +9,7 @@ body {
 nav {
     position: sticky;
     top: 0;
-    background-color: lightseagreen;
+    background-color: rgb(119, 170, 241);
     padding: 0.5rem;
     text-align: right;
 }
@@ -25,13 +25,14 @@ nav a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
+    background-color: inherit;
 }
 .dropdown-content {
     display: none;
     position: absolute;
     width: 100%;
     text-align: center;
-    background-color: lightseagreen;
+    background-color: inherit;
     border-radius: 10px;
 }
 .dropdown-content > * {
@@ -47,23 +48,30 @@ nav a:hover {
 }
 
 /* Constants */
-p {
-    text-indent: 2rem;
-    text-align: justify;
+.row-content {
+    padding: 1rem;
 }
-.credits-link {
-    color: black;
+.row-content {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.row-content a {
     text-decoration: none;
+    color: black;
+}
+p {
+    text-align: center;
+}
+.btn {
+    background-color: rgb(119, 170, 241);
+}
+.btn:hover, .btn:active{
+    background-color: rgba(0, 0, 255,0.8);
+    color: white;
 }
 .col-lg-6 img {
     width: 100%;
 }
-
-/* Header */
-header {
-    padding: 1rem;
-}
-header > *, article > * {
+.title-container {
     text-align: center;
 }
 .title-container, .text-container {
@@ -71,11 +79,6 @@ header > *, article > * {
 }
 header img {
     border-radius: 30%;
-}
-
-/* About me */
-#about-me {
-    padding: 1rem;
 }
 
 /* Scroll top button */

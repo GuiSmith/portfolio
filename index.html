@@ -25,7 +25,7 @@
             </div>
         </nav>
         <!-- Header -->
-        <header class="row" id="home">
+        <header class="row row-content" id="home">
             <!-- Subject text -->
             <div class="col-lg-6 col-sm-12">
                 <!-- Title -->
@@ -45,8 +45,8 @@
                         Abaixo, você verá alguns detalhes sobre mim como pessoa e profissional. Caso esteja procurando por algo em específico ou tenha mais interesse em meus projetos. Pode pular para a parte de projetos ou currículo diretamente!
                     </p>
                     <div>
-                        <a class="btn btn-info" style="float:left">Currículo</a>
-                        <a class="btn btn-info" style="float:right">Projetos</a>
+                        <a class="btn " style="float:left">Currículo</a>
+                        <a class="btn " style="float:right">Projetos</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
             </div>
         </header>
         <!-- About me -->
-        <article class="row" id="about-me">
+        <article class="row row-content" id="about-me">
             <!-- Subject text -->
             <div class="col-lg-6 col-sm-12">
                 <!-- Title -->
@@ -84,11 +84,11 @@
             </div>
         </article>
         <!-- Experience -->
-        <section class="row" id="experience">
+        <section class="row row-content" id="experience">
             <!-- Subject Text -->
             <div class="col-lg-6 col-sm-12">
                 <!-- Title -->
-                <div class="title-container text-center">
+                <div class="title-container">
                     <h2>Experiência</h2>
                     <h5>Ingresso na programação</h5>
                 </div>
@@ -109,6 +109,12 @@
                 <small><a href="https://stock.adobe.com/br/images/business-characters-team-work-office-people-corporate-employee-cartoon-teamwork-communication-flat-business-team-vector-illustration/263385574" class="credits-link" target="_blank">Business characters por Adobe Stock</a></small>
             </div>
         </section>
+        <!-- Projects -->
+        <article class="row-content">
+            <ul id="repositories-list">
+                <!-- Here lays the list of repositories -->
+            </ul>
+        </article>
         <!-- Back to top button -->
         <img src="media/scrollTop.png" width="50px" class="scroll-top" alt="Scroll top button">
         <!-- Footer -->
@@ -135,6 +141,7 @@
                 <img src="media/number.png" alt="Ícone telefone">
             </a>
         </footer>
-        <script src = "script.js"></script>
+        <script type = 'module' src = "script.js"></script>
+        <script type = 'module' src="sources.js"></script>
     </body>
 </html>
