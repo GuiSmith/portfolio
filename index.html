@@ -16,7 +16,7 @@
             <a href="#footer">Contatos</a>
             <a href="">Currículo</a>
             <div class="dropdown">
-                <a href="" class="dropdown-button">Projetos</a>
+                <a href="#projects" class="dropdown-button">Projetos</a>
                 <div class="dropdown-content">
                     <a href="">API</a>
                     <a href="">PHP</a>
@@ -44,15 +44,11 @@
                     <p>
                         Abaixo, você verá alguns detalhes sobre mim como pessoa e profissional. Caso esteja procurando por algo em específico ou tenha mais interesse em meus projetos. Pode pular para a parte de projetos ou currículo diretamente!
                     </p>
-                    <div>
-                        <a class="btn " style="float:left">Currículo</a>
-                        <a class="btn " style="float:right">Projetos</a>
-                    </div>
                 </div>
             </div>
             <!-- Image -->
             <div class="col-lg-6 col-sm-12 text-center">
-                <img src="media/header.png" alt="Homem sentado usando um computador">
+                <img class="section-image" src="media/header.png" alt="Homem sentado usando um computador">
                 <br>
                 <small ><a href="https://pt.vecteezy.com/vetor-gratis/escrit%C3%B3rio"  class="credits-link" target="_blank">Escritório Vetores por Vecteezy</a></small>
             </div>
@@ -78,7 +74,7 @@
             </div>
             <!-- Image -->
             <div class="col-lg-6 col-sm-12 text-center">
-                <img src="media/personal.png" alt="Silhueta deitada lendo um livro">
+                <img class="section-image" src="media/personal.png" alt="Silhueta deitada lendo um livro">
                 <br>
                 <small><a href="https://www.flaticon.com/br/icones-gratis/conforto" title="conforto ícones" class="credits-link" target = "_blank">Conforto ícones criados por Freepik - Flaticon</a></small>
             </div>
@@ -89,8 +85,8 @@
             <div class="col-lg-6 col-sm-12">
                 <!-- Title -->
                 <div class="title-container">
-                    <h2>Experiência</h2>
-                    <h5>Ingresso na programação</h5>
+                    <h1>Experiência</h1>
+                    <h2>Ingresso na programação</h2>
                 </div>
                 <!-- Text -->
                 <div class="text-container">
@@ -104,44 +100,61 @@
             </div>
             <!-- Image -->
             <div class="col-lg-6 col-sm-12 text-center">
-                <img src="media/projects.png" alt="Pessoas de braços cruzados uma do lado da outra">
+                <img class="section-image" src="media/projects.png" alt="Pessoas de braços cruzados uma do lado da outra">
                 <br>
                 <small><a href="https://stock.adobe.com/br/images/business-characters-team-work-office-people-corporate-employee-cartoon-teamwork-communication-flat-business-team-vector-illustration/263385574" class="credits-link" target="_blank">Business characters por Adobe Stock</a></small>
             </div>
         </section>
         <!-- Projects -->
-        <article class="row-content">
-            <ul id="repositories-list">
-                <!-- Here lays the list of repositories -->
-            </ul>
+        <article class="row row-content" id="projects">
+            <!-- Title -->
+            <div class="title-container">
+                <h1>Projetos</h1>
+                <h2>Projetos criados por mim</h2>
+            </div>
+            <div id="card-model" class="card-container col-lg-2 col-md-4 col-sm-12">
+                <div class="card">
+                    <a href="" class="card-link" target="_blank">
+                        <img class="card-img-top" src="" alt="card-img">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text card-description"></p>
+                        <p class="card-text card-graph"></p>
+                        <small class="card-text card-languages" style = 'float:left'></small>
+                    </div>
+                </div>
+            </div>
         </article>
         <!-- Back to top button -->
         <img src="media/scrollTop.png" width="50px" class="scroll-top" alt="Scroll top button">
         <!-- Footer -->
         <footer id="footer">
-            <h4>Contatos</h4>
-            <!-- Whatsapp -->
-            <a href="https://wa.me/5549991145655" target="_blank">
-                <img src="media/whatsapp.png" alt="Ícone whatsapp">
-            </a>
-            <!-- Github -->
-            <a href="https://github.com/GuiSmith" target="_blank">
-                <img src="media/github.png" alt="Ícone github">
-            </a>
-            <!-- E-mail -->
-            <a href="mailto:guilhermessmith2014@gmail.com" target="_blank">
-                <img src="media/email.png" alt="Ícone whatsapp">
-            </a>
-            <!-- Instagram -->
-            <a href="https://instagram.com/shimiters/" target="_blank">
-                <img src="media/instagram.png" alt="Ícone instagram">
-            </a>
-            <!-- Telephone -->
-            <a href="" target="_blank">
-                <img src="media/number.png" alt="Ícone telefone">
-            </a>
+            <!-- Contatos -->
+            <div class="footer-content">
+                <h4>Contatos</h4>
+                <!-- Whatsapp -->
+                <a href="https://wa.me/5549991145655" target="_blank">
+                    <img src="media/whatsapp.png" alt="Ícone whatsapp">
+                </a>
+                <!-- Github -->
+                <a href="https://github.com/GuiSmith" target="_blank">
+                    <img src="media/github.png" alt="Ícone github">
+                </a>
+                <!-- E-mail -->
+                <a href="mailto:guilhermessmith2014@gmail.com" target="_blank">
+                    <img src="media/email.png" alt="Ícone whatsapp">
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/shimiters/" target="_blank">
+                    <img src="media/instagram.png" alt="Ícone instagram">
+                </a>
+                <!-- Telephone -->
+                <a href="" target="_blank">
+                    <img src="media/number.png" alt="Ícone telefone">
+                </a>
+            </div>
         </footer>
-        <script type = 'module' src = "script.js"></script>
-        <script type = 'module' src="sources.js"></script>
+        <script src = "script.js"></script>
     </body>
 </html>
