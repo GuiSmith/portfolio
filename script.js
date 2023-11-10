@@ -57,7 +57,8 @@ async function getGithubData(request, repository = 'std'){
 async function test(){
     const cards = document.querySelector(".card-container");
     const repositories = await getGithubData('repositories');
-    console.log(repositories);
+    //console.log(repositories);
+    var graphColors = {};
     repositories.forEach(async function(repository){
         let content = await getGithubData('contents',repository.name); //Gets content
         let show = false; //Sets variable to check if a repository is ready to launch
@@ -73,32 +74,42 @@ async function test(){
             externalLogoIndex++;
         }
         if(show){ //If the current repository is ready to launch
-            cloneCard(cards,repository.name); //
-            let languages = await getGithubData('languages',repository.name);
-            let totalBytes = 0;
-            let languagesText = "";
+            cloneCard(cards,repository.name); //Clones the card container
+            let languages = await getGithubData('languages',repository.name); //Gets the languages of the current repository
+            let totalBytes = 0; //Sets the variable that will contain the total amount of bytes of every file
             //console.log(languages);
             for(const language in languages){
                 //console.log(`${language}: ${languages[language]}`);
                 totalBytes += languages[language];
+                if(graphColors[language] == undefined){
+                    graphColors[language] = randomColor();
+                    //console.log(graphColors[language]);
+                }
             }
             //console.log(`Total bytes: ${totalBytes}`);
+            const languagesList = document.querySelector(`#${repository.name} .card-languages`);
             for(const language in languages){
-                languagesText += `${language}: ${getPercetage(totalBytes,languages[language])}%.<br>`;
                 let bar = document.createElement('div');
                 bar.classList.add("card-graph-bar");
                 bar.style.width = `${getPercetage(totalBytes,languages[language])}%`;
-                bar.style.backgroundColor = randomColor();
-                console.log(bar.style.backgroundColor);
+                bar.style.backgroundColor = graphColors[language];
+                //console.log(bar.style.backgroundColor);
                 document.querySelector(`#${repository.name} .card-graph`).appendChild(bar);
+
+                let languageItem = document.createElement('li');
+                languageItem.innerHTML = `
+                    <small>
+                        ${language}: ${getPercetage(totalBytes,languages[language])}%
+                    </small>
+                `;
+                languageItem.style.color = graphColors[language];
+                languagesList.appendChild(languageItem);
+                
             }
-            //console.log(languagesText);
             //console.log(content[externalLogoIndex]);
             setContent(`#${repository.name} .card-img-top`,'src',content[externalLogoIndex].download_url);
             setContent(`#${repository.name} .card-title`,'text',repository.name);
             setContent(`#${repository.name} .card-description`,'text',repository.description);
-            setContent(`#${repository.name} .card-graph`, 'title', languagesText);
-            setContent(`#${repository.name} .card-languages`,'text',languagesText);
             setContent(`#${repository.name} .card-link`, 'href', repository.svn_url);
             
         }else{

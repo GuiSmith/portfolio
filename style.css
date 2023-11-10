@@ -58,13 +58,13 @@ nav a:hover {
     width: 75%;
 }
 .title-container, .text-container {
-    margin: 3rem 0;
+    margin-bottom: 3rem;
 }
 .title-container {
     text-align: center;
 }
 .text-container p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .row-content a {
     text-decoration: none;
@@ -88,6 +88,16 @@ nav a:hover {
 #card-model {
     display: none;
 }
+.card {
+    background: rgba(255, 255, 255, 0.3);
+    transition: 1.5s ease;
+}
+.card:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+.card a {
+    float: right;
+}
 .card-img-top:hover {
     background-color: rgb(119, 170, 241);
     transition: 0.4s ease;
@@ -109,14 +119,19 @@ nav a:hover {
     overflow: hidden;
 }
 .card-graph-bar {
-    height: 25px;
+    height: 15px;
     display: inline-block;
     margin: 0;
     font-size: 16px;
     
 }
-.card a {
-    float: right;
+.card li {
+    font-size: 1.4rem;
+}
+.card li > small {
+    color: black;
+    vertical-align: middle;
+    font-size: 1rem;
 }
 
 /* Scroll top button */
@@ -157,4 +172,13 @@ footer img {
 }
 footer img:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+    .text-container p {
+        font-size: 1rem;
+    }
+    .card {
+        margin-bottom: 1rem;
+    }
 }
