@@ -82,6 +82,9 @@ nav a:hover {
 }
 
 /* Card model */
+.card-container {
+    padding: 1rem;
+}
 #card-model {
     display: none;
 }
