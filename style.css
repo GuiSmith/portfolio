@@ -11,38 +11,16 @@ nav {
     top: 0;
     background-color: rgb(119, 170, 241);
     padding: 0.5rem;
-    text-align: right;
     z-index: 1;
 }
 nav a {
     text-decoration: none;
     color: black;
     padding: 0 0.5rem;
-    font-size: 18px;
+    font-size: 24px;
 }
 nav a:hover {
     opacity: 0.5;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-    background-color: inherit;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    background-color: inherit;
-    border-radius: 10px;
-}
-.dropdown-content > * {
-    display: block;
-    z-index: 1;
-    padding: 0.2rem;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 .row {
     margin: 0;
@@ -57,7 +35,7 @@ nav a:hover {
 .section-image {
     width: 75%;
 }
-.title-container, .text-container {
+.text-container {
     margin-bottom: 3rem;
 }
 .title-container {
@@ -171,11 +149,39 @@ footer img:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Mobile */
 @media screen and (max-width: 600px) {
+    nav {
+        text-align: left;
+    }
+    nav i {
+        display: block;
+        float: right;
+    }
+    nav a:first-child {
+        display: block;
+    }
+    nav a:not(:first-child) {
+        display: none;
+    }
+    .title-container {
+        margin-bottom: 2rem;
+    }
     .text-container p {
         font-size: 1rem;
     }
     .card {
         margin-bottom: 1rem;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 600px){
+    nav {
+        text-align: right;
+    }
+    
+    .title-container {
+        margin: 4rem 0;
     }
 }
