@@ -34,7 +34,7 @@ nav a:hover {
 }
 .section-image {
     width: 75%;
-    margin-top: 7rem;
+    
 }
 .text-container {
     margin-bottom: 3rem;
@@ -184,5 +184,8 @@ footer img:hover {
     
     .title-container {
         margin: 4rem 0;
+    }
+    .section-image {
+        margin-top: 7rem;
     }
 }
