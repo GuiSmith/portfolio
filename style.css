@@ -34,7 +34,7 @@ nav a:hover {
 }
 .section-image {
     width: 75%;
-    
+    margin-top: 7rem;
 }
 .text-container {
     margin-bottom: 3rem;
@@ -156,8 +156,10 @@ footer img:hover {
         text-align: left;
     }
     nav i {
-        display: block;
-        float: right;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 35px;
     }
     nav a:first-child {
         display: block;
@@ -178,14 +180,14 @@ footer img:hover {
 
 /* Desktop */
 @media screen and (min-width: 600px){
+    nav i {
+        display: none;
+    }
     nav {
         text-align: right;
     }
     
     .title-container {
         margin: 4rem 0;
-    }
-    .section-image {
-        margin-top: 7rem;
     }
 }

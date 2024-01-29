@@ -1,3 +1,20 @@
+//Mobile navbar
+let navbarIcon = document.querySelector('.navbar-icon');
+let navbarLinks = document.querySelectorAll('#navbar a:not(:first-child)');
+let display = 'none';
+console.log(navbarLinks);
+navbarIcon.addEventListener('click',() => {
+    if(display == 'none'){
+        display = 'block';
+    }else{
+        display = 'none';
+    }
+    navbarLinks.forEach((link) => {
+        link.style.display = display;
+    })
+    
+});
+
 //Scroll
 let scrollTop = document.querySelector(".scroll-top");
 scrollTop.addEventListener("click",function(){
@@ -13,8 +30,6 @@ function scrollFunction(){
         scrollTop.style.display = "none";
     }
 }
-
-test();
 
 //Scrolls to top
 function topFunction(){
@@ -54,7 +69,8 @@ async function getGithubData(request, repository = 'std'){
     }
 }
 
-async function test(){
+main();
+async function main(){
     const cards = document.querySelector(".card-container");
     const repositories = await getGithubData('repositories');
     //console.log(repositories);
@@ -75,50 +91,15 @@ async function test(){
         }
         if(show){ //If the current repository is ready to launch
             cloneCard(cards,repository.name); //Clones the card container
-            let languages = await getGithubData('languages',repository.name); //Gets the languages of the current repository
-            let totalBytes = 0; //Sets the variable that will contain the total amount of bytes of every file
-            //console.log(languages);
-            for(const language in languages){
-                //console.log(`${language}: ${languages[language]}`);
-                totalBytes += languages[language];
-                if(graphColors[language] == undefined){
-                    graphColors[language] = randomColor();
-                    //console.log(graphColors[language]);
-                }
-            }
-            //console.log(`Total bytes: ${totalBytes}`);
-            const languagesList = document.querySelector(`#${repository.name} .card-languages`);
-            for(const language in languages){
-                let bar = document.createElement('div');
-                bar.classList.add("card-graph-bar");
-                bar.style.width = `${getPercetage(totalBytes,languages[language])}%`;
-                bar.style.backgroundColor = graphColors[language];
-                //console.log(bar.style.backgroundColor);
-                document.querySelector(`#${repository.name} .card-graph`).appendChild(bar);
-
-                let languageItem = document.createElement('li');
-                languageItem.innerHTML = `
-                    <small>
-                        ${language}: ${getPercetage(totalBytes,languages[language])}%
-                    </small>
-                `;
-                languageItem.style.color = graphColors[language];
-                languagesList.appendChild(languageItem);
-                
-            }
-            //console.log(content[externalLogoIndex]);
             setContent(`#${repository.name} .card-img-top`,'src',content[externalLogoIndex].download_url);
             setContent(`#${repository.name} .card-title`,'text',repository.name);
             setContent(`#${repository.name} .card-description`,'text',repository.description);
             setContent(`#${repository.name} .card-link`, 'href', repository.svn_url);
-            
+            // console.log(document.querySelector(`#${repository.name}`));
         }else{
             //console.log(`${repository.name} is not ready to launch`);
         }
     });
-    setTimeout(() => {
-        stabilizeHeight();
-    },1000);
 }
 
 //Clones projects cards
@@ -139,60 +120,4 @@ function setContent(query,attribute,value){
         element.setAttribute(attribute,value);
     }
     
-}
-
-//Returns the percentage of a value compared to given 100%
-function getPercetage(hundred, value){
-    let percentage = (100*value)/hundred;
-    return percentage.toFixed(2);
-}
-
-function stabilizeHeight(){
-    const elements = document.querySelectorAll(".card");
-    //console.log(elements);
-    let maxHeight = 0;
-    elements.forEach(function(element){
-        if(element.offsetHeight > maxHeight){
-            maxHeight = element.offsetHeight;
-            //console.log(`${element.id}: ${element.offsetHeight} is new maxheight`);
-        }
-    });
-    //console.log(maxHeight);
-    elements.forEach(function(element){
-        if(element.offsetHeight < maxHeight){
-            element.style.height = `${maxHeight}px`;
-        }
-    });
-}
-
-function randomColor(){
-    let sum = 0;
-    let colors = [];
-    for(let i=0;i<3;i++){
-        let random = randomNumber(0,255);
-        colors.push(random);
-        sum += random;
-        //console.log(`color: ${random}`);
-    }
-    if(sum == 765){
-        console.log("color adjusted");
-        colors[0] = 200;
-    }
-    // Ensure the colors are not too similar
-    while (sum > 350 && sum < 650) {
-        sum = 0;
-        colors = [];
-        for (let i = 0; i < 3; i++) {
-            let random = randomNumber(0, 255);
-            colors.push(random);
-            sum += random;
-        }
-    }
-    //console.log(`rgb(${colors[0]},${colors[1]},${colors[2]})`);
-    //console.log(sum);
-    return `rgb(${colors[0]},${colors[1]},${colors[2]})`;
-}
-
-function randomNumber(from, to){
-    return Math.floor(Math.random() * to) + from;
 }
