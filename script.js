@@ -62,7 +62,8 @@ async function getGithubData(request, repository = 'std'){
     });
 
     if(!response.ok){
-        console.error(`Erro: ${response}`);
+        console.error(`Erro`);
+        console.log(response);
     }else{
         const data = await response.json();
         return data;
@@ -77,27 +78,16 @@ async function main(){
     var graphColors = {};
     repositories.forEach(async function(repository){
         let content = await getGithubData('contents',repository.name); //Gets content
-        let show = false; //Sets variable to check if a repository is ready to launch
-        let externalLogoIndex = 0; //Sets the holder of the index that has the external_logo object, so I don't have to check it again.
-        for (const item of content) { //Iterates through the content 
-            if(item.name.includes('external_logo')){ //Checks if there is an item called "external_logo" 
-                //console.log(`${repository.name} has an external logo`); //Console logs it so I can really check
-                //console.log(content); //Console logs the content of the repository that is ready to launch
-                show = true;
-                //console.log(externalLogoIndex);
-                break; //Closes the iteration to save time and processes
-            }
-            externalLogoIndex++;
-        }
-        if(show){ //If the current repository is ready to launch
+        let logoIndex = content.findIndex(obj => obj.name.includes('external_logo'));
+        if (logoIndex > -1) {
+            //console.log(content);
             cloneCard(cards,repository.name); //Clones the card container
-            setContent(`#${repository.name} .card-img-top`,'src',content[externalLogoIndex].download_url);
+            setContent(`#${repository.name} .card-img-top`,'src',content[logoIndex].download_url);
             setContent(`#${repository.name} .card-title`,'text',repository.name);
             setContent(`#${repository.name} .card-description`,'text',repository.description);
             setContent(`#${repository.name} .card-link`, 'href', repository.svn_url);
-            // console.log(document.querySelector(`#${repository.name}`));
         }else{
-            //console.log(`${repository.name} is not ready to launch`);
+            //console.log('Not ready to launch');
         }
     });
 }
