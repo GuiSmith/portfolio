@@ -101,6 +101,8 @@ async function main(){
                     card.querySelector('.card-title').textContent = repository.name;
                     //Set description text
                     card.querySelector('.card-description').textContent = repository.description;
+                    //Set language
+                    card.querySelector('.card-language').textContent = repository.language;
                     //Set created at
                     card.querySelector('.card-created .created-date').textContent = formatDateTime(repository.created_at);
                     //Set updated at
