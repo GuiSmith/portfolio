@@ -49,16 +49,6 @@ nav a:hover {
     text-decoration: none;
     color: black;
 }
-.text-container {
-    text-align: center;
-}
-.btn {
-    background-color: rgb(119, 170, 241);
-}
-.btn:hover, .btn:active{
-    background-color: rgba(0, 0, 255,0.8);
-    color: white;
-}
 
 /* Card model */
 .card-container {
@@ -74,9 +64,6 @@ nav a:hover {
 .card:hover {
     background: rgba(255, 255, 255, 0.9);
 }
-.card a {
-    float: right;
-}
 .card-img-top {
     max-height: 250px;
     padding: 0.5rem;
@@ -85,7 +72,17 @@ nav a:hover {
     text-align: center;
 }
 .card p {
-    text-align: center;
+    text-align: justify;
+}
+.card .btn-group-container {
+    display: flex;
+    justify-content: center;
+}
+.card .btn-group {
+    margin: 0 auto;
+}
+.card .btn {
+    color: white !important;
 }
 .card-graph {
     padding: 0;
