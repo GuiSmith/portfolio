@@ -1,0 +1,36 @@
+{
+    "html": "<footer id='footer' style='width: 100%; padding: 0.5rem 1rem; background-color: black; color: white;'>\n  <div class='footer-content'>\n    <h4>Contatos</h4>\n    <a href='https://wa.me/5549991145655' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'>\n      <img src='media/whatsapp.png' alt='Ícone whatsapp' style='width: 50px; border: solid 1px white; border-radius: 15px;'>\n    </a>\n    <a href='https://github.com/GuiSmith' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'>\n      <img src='media/github.png' alt='Ícone github' style='width: 50px; border: solid 1px white; border-radius: 15px;'>\n    </a>\n    <a href='mailto:guilhermessmith2014@gmail.com' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'>\n      <img src='media/email.png' alt='Ícone email' style='width: 50px; border: solid 1px white; border-radius: 15px;'>\n    </a>\n    <a href='https://instagram.com/shimiters/' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'>\n      <img src='media/instagram.png' alt='Ícone instagram' style='width: 50px; border: solid 1px white; border-radius: 15px;'>\n    </a>\n    <a href='' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'>\n      <img src='media/number.png' alt='Ícone telefone' style='width: 50px; border: solid 1px white; border-radius: 15px;'>\n    </a>\n  </div>\n</footer>",
+    "contacts": [
+      {
+        "name": "WhatsApp",
+        "url": "https://wa.me/5549991145655",
+        "img": "media/whatsapp.png",
+        "html": "<a href='https://wa.me/5549991145655' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'><img src='media/whatsapp.png' alt='Ícone whatsapp' style='width: 50px; border: solid 1px white; border-radius: 15px;'></a>"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/GuiSmith",
+        "img": "media/github.png",
+        "html": "<a href='https://github.com/GuiSmith' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'><img src='media/github.png' alt='Ícone github' style='width: 50px; border: solid 1px white; border-radius: 15px;'></a>"
+      },
+      {
+        "name": "E-mail",
+        "url": "mailto:guilhermessmith2014@gmail.com",
+        "img": "media/email.png",
+        "html": "<a href='mailto:guilhermessmith2014@gmail.com' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'><img src='media/email.png' alt='Ícone email' style='width: 50px; border: solid 1px white; border-radius: 15px;'></a>"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/shimiters/",
+        "img": "media/instagram.png",
+        "html": "<a href='https://instagram.com/shimiters/' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'><img src='media/instagram.png' alt='Ícone instagram' style='width: 50px; border: solid 1px white; border-radius: 15px;'></a>"
+      },
+      {
+        "name": "Telefone",
+        "url": "",
+        "img": "media/number.png",
+        "html": "<a href='' target='_blank' style='text-decoration: none; color: white; font-size: 16px;'><img src='media/number.png' alt='Ícone telefone' style='width: 50px; border: solid 1px white; border-radius: 15px;'></a>"
+      }
+    ]
+  }
+  
