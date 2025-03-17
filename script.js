@@ -91,6 +91,7 @@ async function main(){
         repositories.forEach(async function(repository){
             let content = await getGithubData('contents',repository.name); //Gets content
             if (content.length > 0) {
+                console.log(content.findIndex(obj => obj.name.includes('external_logo')));
                 let logoIndex = content.findIndex(obj => obj.name.includes('external_logo'));
                 if (logoIndex > -1) {
                     //console.log(content);
@@ -118,19 +119,23 @@ async function main(){
 
                     });
                     //Set visit button
+                    const visitButton = card.querySelector('.visib-btn');
                     if (repository.homepage == null) {
-                        card.classList.add('disabled');
-                        card.querySelector('.visib-btn').href = "#";
+                        visitButton.classList.add('disabled');
+                        visitButton.href = "#";
+                        visitButton.addEventListener('click', (event) => {
+                            event.preventDefault();
+                        });
                     }else{
-                        card.querySelector('.visit-btn').href = repository.homepage;
+                        visitButton.href = repository.homepage;
                     }
                     //Set link href
                     card.querySelector('.view-repo-btn').href = repository.html_url;                    
                 }else{
-                    //console.log(`Repository ${repository.name} is not ready to launch`);
+                    console.log(`Repository ${repository.name} is not ready to launch`);
                 }
             }else{
-                //console.log(`Repository '${repository.name}' has no content!`);
+                console.log(`Repository '${repository.name}' has no content!`);
             }
         });
     }else{
