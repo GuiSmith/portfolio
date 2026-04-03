@@ -9,6 +9,11 @@ It’s designed to be clean, fast, and easy to maintain, showcasing:
 - A projects area that pulls public repositories directly from GitHub (no backend)
 - Dark/light theme toggle and PT-BR/EN-US language toggle
 
+## Deploy (GitHub Pages)
+
+1. In GitHub: `Settings` → `Pages` → set **Source** to **GitHub Actions**
+2. Push to `main` and the workflow will publish the `dist/` build
+
 ## Setup
 
 ```bash
