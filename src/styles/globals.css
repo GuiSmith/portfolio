@@ -1,0 +1,112 @@
+:root {
+  --bg-0: #0b0f17;
+  --bg-1: #0f172a;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text-0: rgba(255, 255, 255, 0.92);
+  --text-1: rgba(255, 255, 255, 0.72);
+  --accent: #62e6ff;
+  --accent-2: #a78bfa;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(1200px 800px at 70% -10%, rgba(98, 230, 255, 0.12), transparent 60%),
+    radial-gradient(900px 600px at 10% 20%, rgba(167, 139, 250, 0.1), transparent 55%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  color: var(--text-0);
+  min-height: 100vh;
+}
+
+.container-narrow {
+  max-width: 1080px;
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.muted {
+  color: var(--text-1);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-accent {
+  --bs-btn-color: #001018;
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: rgba(0, 0, 0, 0.08);
+  --bs-btn-hover-bg: #43d8f6;
+  --bs-btn-hover-border-color: rgba(0, 0, 0, 0.08);
+  --bs-btn-active-bg: #2ccbe9;
+  --bs-btn-active-border-color: rgba(0, 0, 0, 0.12);
+}
+
+.nav-blur {
+  background: rgba(10, 14, 22, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.badge-tech {
+  background: rgba(98, 230, 255, 0.12);
+  border: 1px solid rgba(98, 230, 255, 0.22);
+  color: var(--text-0);
+}
+
+.card-hover {
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(98, 230, 255, 0.26);
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.timeline-item {
+  position: relative;
+  padding: 0.25rem 0 1.25rem 0;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-dot {
+  position: absolute;
+  left: -0.05rem;
+  top: 0.35rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: rgba(98, 230, 255, 0.95);
+  box-shadow: 0 0 0 5px rgba(98, 230, 255, 0.08);
+}
+

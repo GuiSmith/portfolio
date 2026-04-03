@@ -1,0 +1,12 @@
+{
+  "githubUser": "GuiSmith",
+  "projects": {
+    "includeForks": false,
+    "cacheTtlSeconds": 3600
+  },
+  "defaults": {
+    "language": "pt-BR",
+    "theme": "dark"
+  }
+}
+

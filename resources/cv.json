@@ -1,0 +1,206 @@
+{
+  "personal_info": {
+    "full_name": "Guilherme Smith Dansiguer Rodrigues",
+    "location": {
+      "city": "Chapecó",
+      "state": "SC",
+      "neighborhood": "São Cristóvão",
+      "country": "Brazil"
+    },
+    "contact": {
+      "email": "guilhermessmith2014@gmail.com",
+      "phone": "+55 49 99111-6100",
+      "linkedin": "https://linkedin.com/in/guilherme-smith-8b4bb6238"
+    }
+  },
+  "professional_summary": "Profissional de tecnologia fluente em inglês, com experiência em desenvolvimento de software e banco de dados. Atua diretamente em incidentes críticos, realizando análise de causa raiz e resolução sob pressão. Experiência em desenvolvimento fullstack com Node.js, React, PHP e automações. Forte domínio de SQL em ambientes multi-tenant, com foco em performance, consistência de dados e operações em produção.",
+  "objective": "Atuar na área de desenvolvimento de software ou banco de dados, aplicando conhecimentos técnicos, contribuindo com soluções eficientes e evoluindo profissionalmente.",
+  "recommendation_letters": [
+    "carta-recomendacao-alvaro-pagliari.pdf"
+  ],
+  "work_experience": [
+    {
+      "role": "Operador de logística",
+      "company": "AngelLira Rastreamento Satelital",
+      "start_date": "2021-05-15",
+      "end_date": "2021-11-21",
+      "responsibilities": [
+        "Análise de viagens logísticas para refletir a situação real no sistema"
+      ],
+      "achievements": [
+        "Mantive assertividade de 97% nas análises",
+        "Reduzi tempo de análise de erros de minutos para 5 segundos com Excel"
+      ]
+    },
+    {
+      "role": "Líder Suporte Técnico",
+      "company": "AngelLira Rastreamento Satelital",
+      "start_date": "2021-11-21",
+      "end_date": "2023-05-15",
+      "responsibilities": [
+        "Suporte técnico para clientes e colaboradores internos",
+        "Treinamento de equipe",
+        "Feedback contínuo"
+      ],
+      "achievements": [
+        "Implementei dashboards no Power BI para métricas do setor"
+      ]
+    },
+    {
+      "role": "Consultor de Implantação",
+      "company": "IXC Soft",
+      "start_date": "2023-05-15",
+      "end_date": "2024-12-19",
+      "responsibilities": [
+        "Implantação de sistemas",
+        "Levantamento de requisitos",
+        "Planejamento e execução de projetos",
+        "Integrações com sistemas",
+        "Treinamentos para usuários (gerentes e CEOs)",
+        "Documentação técnica e funcional",
+        "Testes e validações"
+      ]
+    },
+    {
+      "role": "Técnico de Banco de Dados",
+      "company": "IXC Soft",
+      "start_date": "2024-12-19",
+      "end_date": "2026-03-20",
+      "responsibilities": [
+        "Suporte técnico especializado em banco de dados",
+        "Gestão de acessos com segurança",
+        "Diagnóstico de problemas de conexão (TCP/IP)",
+        "Geração de dumps e backups",
+        "Atuação em incidentes críticos",
+        "Manipulação de dados em ambiente multi-tenant",
+        "Análise de métricas e padrões",
+        "Geração de insights para desenvolvimento",
+        "Automação de processos com PHP e MariaDB"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "minhas-contas",
+      "stack": ["React", "Node.js"],
+      "description": "Sistema web fullstack para controle financeiro com API REST e regras de negócio"
+    },
+    {
+      "name": "Sharkiot",
+      "stack": ["React", "Node.js"],
+      "description": "Sistema de integração e visualização de dados com arquitetura em camadas"
+    },
+    {
+      "name": "Viga_bank",
+      "stack": ["React", "Node.js"],
+      "description": "Sistema financeiro com API REST, regras de negócio e interface interativa"
+    },
+    {
+      "name": "blog",
+      "stack": ["PHP Slim"],
+      "description": "Aplicação web com rotas, banco de dados e backend"
+    },
+    {
+      "name": "Deck",
+      "stack": ["PHP"],
+      "description": "Sistema de gerenciamento de baralho com foco em lógica e estruturas de dados"
+    },
+    {
+      "name": "MeteorStriker",
+      "stack": ["JavaScript"],
+      "description": "Jogo web com lógica de estados e pontuação"
+    },
+    {
+      "name": "tic-tac-toe",
+      "stack": ["JavaScript"],
+      "description": "Jogo da velha com IA imbatível"
+    },
+    {
+      "name": "web-setup",
+      "stack": ["ShellScript"],
+      "description": "Automação de ambientes web"
+    },
+    {
+      "name": "documentar-cartao",
+      "stack": ["ShellScript"],
+      "description": "Automação de documentação"
+    },
+    {
+      "name": "rclone-but-safe",
+      "stack": ["ShellScript"],
+      "description": "Automação de backups com segurança"
+    }
+  ],
+  "skills": {
+    "soft_skills": [
+      "Comunicação técnica",
+      "Resolução de problemas",
+      "Eficiência sob pressão",
+      "Trabalho em equipe e liderança",
+      "Treinamento e capacitação",
+      "Análise de requisitos",
+      "Otimização de processos"
+    ],
+    "technical_skills": [
+      "MariaDB",
+      "SQL avançado",
+      "Node.js",
+      "React",
+      "PHP",
+      "Docker",
+      "ShellScript",
+      "Linux (Debian/Ubuntu)",
+      "APIs REST",
+      "Automação de processos",
+      "Análise de performance",
+      "Banco de dados em produção"
+    ]
+  },
+  "knowledge": [
+    "Lógica de programação",
+    "Estrutura de dados",
+    "Arquitetura de sistemas",
+    "Protocolos TCP/IP",
+    "Banco de dados avançado (replicação, HA - em aprendizado)",
+    "Fundamentos Linux",
+    "Integração via APIs REST",
+    "Cibersegurança (CIA)",
+    "Análise de dados com Python (básico)"
+  ],
+  "education": [
+    {
+      "course": "Sistemas de Informação",
+      "institution": "Unoesc",
+      "start": "2023-08",
+      "end": "2027-12"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Docker containers & images",
+      "platform": "Udemy",
+      "year": 2025
+    },
+    {
+      "name": "Becoming a Production Mysql DBA",
+      "platform": "Udemy",
+      "year": 2026
+    },
+    {
+      "name": "Desenvolvimento front-end com React",
+      "platform": "Udemy",
+      "year": 2025
+    },
+    {
+      "name": "Administração de redes e sistemas",
+      "platform": "IXC Soft",
+      "year": 2025
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "level": "Fluent"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+Create a modern, professional developer portfolio as a responsive SPA using React (Next.js preferred).
+
+The design should be clean, minimal, and slightly futuristic, with smooth animations and a strong focus on readability and hierarchy.
+
+Sections required:
+
+1. Hero Section
+- Name: Guilherme Smith Dansiguer Rodrigues
+- Title: Fullstack Developer | Database Specialist
+- Short tagline: "Building reliable systems under pressure"
+- CTA buttons: "View Projects", "Contact"
+
+2. About Me
+- Summary describing experience with backend, databases, and critical incident handling
+- Highlight strong SQL expertise and real-world production experience
+- Mention automation and performance optimization
+
+3. Skills
+- Grouped sections:
+  - Backend: Node.js, PHP
+  - Frontend: React, JavaScript
+  - Database: MariaDB, SQL (advanced)
+  - DevOps: Docker, Linux, ShellScript
+- Display as badges or cards
+
+4. Projects (IMPORTANT)
+- Fetch dynamically from GitHub API:
+  https://api.github.com/users/YOUR_USERNAME/repos
+- Show only relevant projects (filter out forks if possible)
+- Each project card should include:
+  - Name
+  - Description
+  - Main language
+  - Link to repository
+- Highlight top 4-6 projects visually
+
+5. Experience
+- Timeline style
+- Focus on:
+  - Database Technician (IXC Soft)
+  - Implementation Consultant
+  - Tech Support Leader
+- Emphasize:
+  - Incident response
+  - Root cause analysis
+  - Data consistency fixes
+  - Automation impact
+
+6. Education & Certifications
+- Systems Information degree (in progress)
+- Relevant courses (Docker, MySQL DBA, React)
+
+7. Contact
+- Email
+- LinkedIn
+- Simple contact form (optional)
+
+Technical requirements:
+- Use React.js
+- bootstrap for styling
+- Smooth scroll navigation
+- Subtle animations (Framer Motion preferred)
+- Dark mode default
+- Fully responsive
+- Clean component structure
+
+Extra features (nice to have):
+- Loading skeletons for GitHub data
+- GitHub API caching
+- SEO metadata
+- Sticky navbar
+
+Design direction:
+- Professional but not boring
+- Slightly bold tech aesthetic
+- Avoid generic templates
+- Prioritize clarity over decoration
