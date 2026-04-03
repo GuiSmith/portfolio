@@ -2,7 +2,7 @@ import { useLanguage } from "../state/language.jsx";
 import { useTheme } from "../state/theme.jsx";
 
 export default function LanguageToggle() {
-  const { lang, toggle, t } = useLanguage();
+  const { lang, toggle } = useLanguage();
   const { theme } = useTheme();
   const outlineClass =
     theme === "light"
@@ -12,12 +12,14 @@ export default function LanguageToggle() {
   return (
     <button
       type="button"
-      className={outlineClass}
+      className={`${outlineClass} px-2`}
       onClick={toggle}
       aria-label="Toggle language"
-      title={lang}
+      title={lang === "pt-BR" ? "Português (Brasil)" : "English (US)"}
     >
-      {t.toggles.langShort}
+      <span aria-hidden="true" style={{ fontSize: "1.1rem", lineHeight: 1 }}>
+        {lang === "pt-BR" ? "🇧🇷" : "🇺🇸"}
+      </span>
     </button>
   );
 }
