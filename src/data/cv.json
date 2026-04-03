@@ -13,8 +13,8 @@
       "linkedin": "https://linkedin.com/in/guilherme-smith-8b4bb6238"
     }
   },
-  "professional_summary": "Profissional de tecnologia fluente em inglês, com experiência em desenvolvimento de software e banco de dados. Atua diretamente em incidentes críticos, realizando análise de causa raiz e resolução sob pressão. Experiência em desenvolvimento fullstack com Node.js, React, PHP e automações. Forte domínio de SQL em ambientes multi-tenant, com foco em performance, consistência de dados e operações em produção.",
-  "objective": "Atuar na área de desenvolvimento de software ou banco de dados, aplicando conhecimentos técnicos, contribuindo com soluções eficientes e evoluindo profissionalmente.",
+  "professional_summary": "Profissional de tecnologia, fluente em inglês, com experiência em desenvolvimento de software e banco de dados, atuando diretamente em incidentes críticos de indisponibilidade, com análise de causa raiz e resolução sob pressão.\n\nDesenvolvimento de projetos de softwares fullstack com Node.js, React.js, PHP, ShellScript, HTML, CSS e JS, com foco em construção de APIs, interfaces web e configuração de ambientes isolados de produção e desenvolvimento com docker-compose e Dockerfile. Aplicação de documentação de API, arquitetura de software (MVC), ORM, etc.\n\nDomínio avançado de SQL adquirido após anos executando queries complexas em ambientes multi-tenant, investigando e resolvendo inconsistências de dados causadas por falhas de desenvolvimento e realizando operações volumosas com controle de impacto.\n\nExperiência na automação de processos com PHP + MariaDB, reduzindo tarefas operacionais de horas para segundos.",
+  "objective": "Busco uma oportunidade na área de desenvolvimento de software ou banco de dados, onde eu possa aplicar meus conhecimentos, contribuir com soluções eficientes e continuar evoluindo profissionalmente.",
   "recommendation_letters": ["carta-recomendacao-alvaro-pagliari.pdf"],
   "work_experience": [
     {
@@ -22,10 +22,10 @@
       "company": "AngelLira Rastreamento Satelital",
       "start_date": "2021-05-15",
       "end_date": "2021-11-21",
-      "responsibilities": ["Análise de viagens logísticas para refletir a situação real no sistema"],
+      "responsibilities": ["Análise de viagens logísticas para que o sistema representasse a situação real"],
       "achievements": [
-        "Mantive assertividade de 97% nas análises",
-        "Reduzi tempo de análise de erros de minutos para 5 segundos com Excel"
+        "Mantive assertividade de 97% em análises de viagens logísticas",
+        "Reduzi tempo de análises de erros de integração de minutos para 5 segundos via planilha Excel"
       ]
     },
     {
@@ -33,7 +33,11 @@
       "company": "AngelLira Rastreamento Satelital",
       "start_date": "2021-11-21",
       "end_date": "2023-05-15",
-      "responsibilities": ["Suporte técnico para clientes e colaboradores internos", "Treinamento de equipe", "Feedback contínuo"],
+      "responsibilities": [
+        "Prestação de suporte para colaboradores internos e clientes",
+        "Feedbacks periódicos para colaboradores internos",
+        "Treinamento de colaboradores internos"
+      ],
       "achievements": ["Implementei dashboards no Power BI para métricas do setor"]
     },
     {
@@ -42,13 +46,14 @@
       "start_date": "2023-05-15",
       "end_date": "2024-12-19",
       "responsibilities": [
-        "Implantação de sistemas",
-        "Levantamento de requisitos",
-        "Planejamento e execução de projetos",
-        "Integrações com sistemas",
-        "Treinamentos para usuários (gerentes e CEOs)",
-        "Documentação técnica e funcional",
-        "Testes e validações"
+        "Implantação de sistemas, incluindo levantamento de requisitos, planejamento e execução de projetos",
+        "Configuração, personalização e integração com sistemas já existentes",
+        "Condução de treinamentos para usuários (em sua maioria gerentes e CEOs)",
+        "Acompanhamento consultivo após treinamento",
+        "Análise de importação de dados",
+        "Execução de testes e validações para garantir estabilidade do sistema",
+        "Elaboração de documentação técnica e funcional",
+        "Garantia de implementação eficiente e alinhada aos objetivos do negócio"
       ],
       "achievements": null
     },
@@ -59,14 +64,16 @@
       "end_date": "2026-03-20",
       "responsibilities": [
         "Suporte técnico especializado em banco de dados",
-        "Gestão de acessos com segurança",
+        "Disponibilização de usuários de escrita/leitura mediante completude de processos internos de segurança",
         "Diagnóstico de problemas de conexão (TCP/IP)",
-        "Geração de dumps e backups",
+        "Disponibilização de dumps/backups personalizados",
         "Atuação em incidentes críticos",
-        "Manipulação de dados em ambiente multi-tenant",
+        "Atuação direta em incidentes críticos de indisponibilidade, com análise de causa raiz e resolução sob pressão",
+        "Manipulação de dados em ambiente multi-tenant via SQL (MariaDB)",
         "Análise de métricas e padrões",
-        "Geração de insights para desenvolvimento",
-        "Automação de processos com PHP e MariaDB"
+        "Análise de métricas e identificação de padrões de falhas para apoio à investigação de problemas em produção",
+        "Geração de insights para o time de desenvolvimento com base em dados reais",
+        "Automação de processos com PHP + MariaDB, reduzindo tarefas operacionais de horas para segundos"
       ],
       "achievements": null
     }
@@ -86,4 +93,3 @@
     { "name": "Administração de redes e sistemas", "platform": "IXC Soft", "year": 2025 }
   ]
 }
-

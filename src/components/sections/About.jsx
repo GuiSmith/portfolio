@@ -10,7 +10,9 @@ export default function About() {
       <div className="row g-3">
         <div className="col-lg-7">
           <div className="glass rounded-4 p-4">
-            <p className="mb-0">{cv.professional_summary}</p>
+            <p className="mb-0" style={{ whiteSpace: "pre-line" }}>
+              {cv.professional_summary}
+            </p>
           </div>
         </div>
         <div className="col-lg-5">
@@ -27,4 +29,3 @@ export default function About() {
     </Section>
   );
 }
-

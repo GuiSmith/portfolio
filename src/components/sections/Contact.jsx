@@ -32,9 +32,11 @@ export default function Contact() {
   const [message, setMessage] = useState("");
 
   const messageText = useMemo(() => {
-    const companyLine = company ? `Company: ${company}\n` : "";
-    return `Name: ${name}\n${companyLine}\n${message}`;
-  }, [company, message, name]);
+    const nameLabel = t?.contact?.prefillNameLabel || t?.contact?.name || "Name";
+    const companyLabel = t?.contact?.prefillCompanyLabel || t?.contact?.company || "Company";
+    const companyLine = company ? `${companyLabel}: ${company}\n` : "";
+    return `${nameLabel}: ${name}\n${companyLine}\n${message}`;
+  }, [company, message, name, t]);
 
   const mailto = useMemo(() => {
     const subject = `Portfolio contact — ${name || "Hello"}`;
