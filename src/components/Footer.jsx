@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import cv from "../data/cv.json";
 import { useLanguage } from "../state/language.jsx";
@@ -7,6 +7,8 @@ import config from "../../portfolio.config.json";
 export default function Footer() {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
+  const whatsapp = String(cv.personal_info.contact.phone || "").replace(/\D/g, "");
+  const whatsappUrl = whatsapp ? `https://wa.me/${whatsapp}` : null;
 
   return (
     <footer className="py-4 mt-5 border-top border-light border-opacity-10">
@@ -33,6 +35,17 @@ export default function Footer() {
           >
             <FaLinkedin size={18} />
           </a>
+          {whatsappUrl ? (
+            <a
+              className="muted text-decoration-none"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp size={18} />
+            </a>
+          ) : null}
           <a
             className="muted text-decoration-none"
             href={`mailto:${cv.personal_info.contact.email}`}
