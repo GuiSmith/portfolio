@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import cv from "../../data/cv.json";
 import { useLanguage } from "../../state/language.jsx";
 import { useTheme } from "../../state/theme.jsx";
+import CvButton from "../CvButton.jsx";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -47,6 +48,7 @@ export default function Hero() {
               <a className={secondaryBtn} href="#contact">
                 {t.hero.ctaContact}
               </a>
+              <CvButton size="md" label={t.hero.ctaCv} />
             </div>
           </div>
         </motion.div>

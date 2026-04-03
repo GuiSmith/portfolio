@@ -2,6 +2,7 @@ import ThemeToggle from "./ThemeToggle.jsx";
 import LanguageToggle from "./LanguageToggle.jsx";
 import { useLanguage } from "../state/language.jsx";
 import { useTheme } from "../state/theme.jsx";
+import CvButton from "./CvButton.jsx";
 
 export default function Navbar() {
   const { t } = useLanguage();
@@ -49,6 +50,7 @@ export default function Navbar() {
               </li>
             ))}
             <li className="nav-item ms-lg-2 d-flex gap-2 align-items-center">
+              <CvButton size="sm" />
               <LanguageToggle />
               <ThemeToggle />
             </li>

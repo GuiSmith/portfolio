@@ -1,5 +1,11 @@
 {
   "githubUser": "GuiSmith",
+  "cv": {
+    "publishedUrls": {
+      "pt-BR": "https://docs.google.com/document/d/e/2PACX-1vSPxHSCccBnvT-l2LYHNn02GjW584hszMlMzAZOyWmOOp6DgO4lo_b5j9OrTtqw-cGJ0ZlKhPsmDPWS/pub",
+      "en-US": "https://docs.google.com/document/d/e/2PACX-1vSlHgfNeeMk44JrIPbzFhl_XVaQH-WauqgqetgtwA5D_cCz9w7U1KhqEOYozOYT7zrepaCd2Wj9px8g/pub"
+    }
+  },
   "projects": {
     "includeForks": false,
     "cacheTtlSeconds": 3600
@@ -9,4 +15,3 @@
     "theme": "dark"
   }
 }
-

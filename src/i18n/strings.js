@@ -7,6 +7,7 @@ export const STRINGS = {
       experience: "Experiência",
       education: "Formação",
       contact: "Contato",
+      cv: "Currículo",
     },
     hero: {
       eyebrow: "Fullstack • Banco de Dados • Produção",
@@ -14,6 +15,7 @@ export const STRINGS = {
       tagline: "Building reliable systems under pressure",
       ctaProjects: "Ver Projetos",
       ctaContact: "Contato",
+      ctaCv: "Ver CV",
     },
     about: {
       eyebrow: "Sobre",
@@ -102,6 +104,7 @@ export const STRINGS = {
       experience: "Experience",
       education: "Education",
       contact: "Contact",
+      cv: "Resume",
     },
     hero: {
       eyebrow: "Fullstack • Database • Production",
@@ -109,6 +112,7 @@ export const STRINGS = {
       tagline: "Building reliable systems under pressure",
       ctaProjects: "View Projects",
       ctaContact: "Contact",
+      ctaCv: "View CV",
     },
     about: {
       eyebrow: "About",
@@ -190,4 +194,3 @@ export const STRINGS = {
     },
   },
 };
-
