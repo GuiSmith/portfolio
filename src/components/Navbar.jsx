@@ -1,9 +1,11 @@
 import ThemeToggle from "./ThemeToggle.jsx";
 import LanguageToggle from "./LanguageToggle.jsx";
 import { useLanguage } from "../state/language.jsx";
+import { useTheme } from "../state/theme.jsx";
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   const links = [
     { href: "#about", label: t.nav.about },
@@ -15,7 +17,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark sticky-top nav-blur">
+    <nav
+      className={`navbar navbar-expand-lg sticky-top nav-blur ${
+        theme === "light" ? "navbar-light" : "navbar-dark"
+      }`}
+    >
       <div className="container container-narrow">
         <a className="navbar-brand fw-semibold" href="#top">
           <span className="gradient-text">Guilherme</span>
@@ -52,4 +58,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

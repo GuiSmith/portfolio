@@ -4,11 +4,19 @@ import { useLanguage } from "../../state/language.jsx";
 import { useMemo, useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { useTheme } from "../../state/theme.jsx";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const email = cv.personal_info.contact.email;
   const linkedin = cv.personal_info.contact.linkedin;
+  const outlineBtn =
+    theme === "light"
+      ? "btn btn-outline-dark border-opacity-25 d-inline-flex align-items-center gap-2 justify-content-start"
+      : "btn btn-outline-light border-opacity-25 d-inline-flex align-items-center gap-2 justify-content-start";
+  const outlineBtnPlain =
+    theme === "light" ? "btn btn-outline-dark border-opacity-25" : "btn btn-outline-light border-opacity-25";
 
   const [name, setName] = useState("");
   const [fromEmail, setFromEmail] = useState("");
@@ -30,14 +38,14 @@ export default function Contact() {
             <div className="fw-semibold mb-2">{t.contact.direct}</div>
             <div className="d-flex flex-column gap-2">
               <a
-                className="btn btn-outline-light border-opacity-25 d-inline-flex align-items-center gap-2 justify-content-start"
+                className={outlineBtn}
                 href={`mailto:${email}`}
               >
                 <HiOutlineMail size={18} />
                 <span>{email}</span>
               </a>
               <a
-                className="btn btn-outline-light border-opacity-25 d-inline-flex align-items-center gap-2 justify-content-start"
+                className={outlineBtn}
                 href={linkedin}
                 target="_blank"
                 rel="noreferrer"
@@ -100,7 +108,7 @@ export default function Contact() {
                 </button>
                 <button
                   type="button"
-                  className="btn btn-outline-light border-opacity-25"
+                  className={outlineBtnPlain}
                   onClick={() => {
                     setName("");
                     setFromEmail("");
@@ -118,4 +126,3 @@ export default function Contact() {
     </Section>
   );
 }
-

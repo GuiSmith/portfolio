@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import cv from "../../data/cv.json";
 import { useLanguage } from "../../state/language.jsx";
+import { useTheme } from "../../state/theme.jsx";
 
 export default function Hero() {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const fullName = cv.personal_info.full_name;
   const parts = fullName.split(" ");
   const smithIndex = parts.findIndex((p) => p.toLowerCase() === "smith");
+  const secondaryBtn =
+    theme === "light" ? "btn btn-outline-dark border-opacity-25" : "btn btn-outline-light border-opacity-25";
 
   return (
     <header id="top" className="pt-5 pb-4">
@@ -40,7 +44,7 @@ export default function Hero() {
               <a className="btn btn-accent fw-semibold" href="#projects">
                 {t.hero.ctaProjects}
               </a>
-              <a className="btn btn-outline-light border-opacity-25" href="#contact">
+              <a className={secondaryBtn} href="#contact">
                 {t.hero.ctaContact}
               </a>
             </div>

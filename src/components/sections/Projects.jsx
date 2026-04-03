@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import Section from "../Section.jsx";
 import { useLanguage } from "../../state/language.jsx";
+import { useTheme } from "../../state/theme.jsx";
 import config from "../../../portfolio.config.json";
 import { fetchGithubRepos, groupRepos, readCachedRepos, writeCachedRepos } from "../../lib/github.js";
 
@@ -20,9 +21,11 @@ function SkeletonCard() {
 }
 
 function LinkButton({ href, label }) {
+  const { theme } = useTheme();
+  const cls = theme === "light" ? "btn btn-sm btn-outline-dark border-opacity-25" : "btn btn-sm btn-outline-light border-opacity-25";
   return (
     <a
-      className="btn btn-sm btn-outline-light border-opacity-25"
+      className={cls}
       href={href}
       target="_blank"
       rel="noreferrer"
@@ -34,6 +37,7 @@ function LinkButton({ href, label }) {
 
 export default function Projects() {
   const { t, lang } = useLanguage();
+  const { theme } = useTheme();
 
   const username = config.githubUser;
   const ttl = Number(config?.projects?.cacheTtlSeconds || 3600);
@@ -90,7 +94,9 @@ export default function Projects() {
       <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
         <div className="muted">{t.projects.hint}</div>
         <a
-          className="btn btn-sm btn-outline-light border-opacity-25 d-inline-flex align-items-center gap-2"
+          className={`btn btn-sm ${
+            theme === "light" ? "btn-outline-dark" : "btn-outline-light"
+          } border-opacity-25 d-inline-flex align-items-center gap-2`}
           href={`https://github.com/${username}`}
           target="_blank"
           rel="noreferrer"
@@ -185,7 +191,9 @@ export default function Projects() {
                         {extraList.slice(0, 4).map((r) => (
                           <a
                             key={r.full_name}
-                            className="btn btn-sm btn-outline-light border-opacity-25"
+                            className={`btn btn-sm ${
+                              theme === "light" ? "btn-outline-dark" : "btn-outline-light"
+                            } border-opacity-25`}
                             href={r.html_url}
                             target="_blank"
                             rel="noreferrer"

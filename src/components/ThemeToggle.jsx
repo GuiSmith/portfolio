@@ -5,11 +5,15 @@ import { useLanguage } from "../state/language.jsx";
 export default function ThemeToggle() {
   const { theme, toggle } = useTheme();
   const { t } = useLanguage();
+  const outlineClass =
+    theme === "light"
+      ? "btn btn-sm btn-outline-dark border-opacity-25 d-inline-flex align-items-center gap-2"
+      : "btn btn-sm btn-outline-light border-opacity-25 d-inline-flex align-items-center gap-2";
 
   return (
     <button
       type="button"
-      className="btn btn-sm btn-outline-light border-opacity-25 d-inline-flex align-items-center gap-2"
+      className={outlineClass}
       onClick={toggle}
       aria-label="Toggle theme"
     >
@@ -20,4 +24,3 @@ export default function ThemeToggle() {
     </button>
   );
 }
-

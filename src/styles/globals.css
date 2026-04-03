@@ -10,6 +10,16 @@
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
 }
 
+html[data-bs-theme="light"] {
+  --bg-0: #f7fafc;
+  --bg-1: #eef2ff;
+  --card: rgba(255, 255, 255, 0.75);
+  --card-border: rgba(2, 6, 23, 0.10);
+  --text-0: rgba(2, 6, 23, 0.92);
+  --text-1: rgba(2, 6, 23, 0.68);
+  --shadow: 0 18px 50px rgba(2, 6, 23, 0.12);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,6 +30,12 @@ body {
     linear-gradient(180deg, var(--bg-0), var(--bg-1));
   color: var(--text-0);
   min-height: 100vh;
+}
+
+html[data-bs-theme="light"] body {
+  background: radial-gradient(1200px 800px at 70% -10%, rgba(98, 230, 255, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 10% 20%, rgba(167, 139, 250, 0.16), transparent 55%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
 }
 
 .container-narrow {
@@ -62,6 +78,11 @@ body {
   background: rgba(10, 14, 22, 0.7);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+html[data-bs-theme="light"] .nav-blur {
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(2, 6, 23, 0.08);
 }
 
 .badge-tech {
